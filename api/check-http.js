@@ -1,9 +1,6 @@
-const express = require("express");
 const axios = require("axios");
 
-const app = express();
-
-app.get("/api/check-http", async (req, res) => {
+module.exports = async (req, res) => {
     const { host } = req.query;
     if (!host) return res.status(400).json({ error: "Parameter 'host' diperlukan" });
 
@@ -21,6 +18,4 @@ app.get("/api/check-http", async (req, res) => {
             error: error.message,
         });
     }
-});
-
-module.exports = (req, res) => app(req, res);
+};
