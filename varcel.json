@@ -3,7 +3,7 @@
   "builds": [
     { "src": "api/check-http.js", "use": "@vercel/node" },
     { "src": "api/ip-info.js", "use": "@vercel/node" }
-    { "src": "/api/auto-check-port", "use": "@varcel/node" },
+    { "src": "api/auto-check-port", "use": "@varcel/node" },
   ],
   "routes": [
     { "src": "/api/check-http", "dest": "/api/check-http.js" },
