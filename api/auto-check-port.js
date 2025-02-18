@@ -1,5 +1,4 @@
 const axios = require("axios");
-const cheerio = require("cheerio");
 
 module.exports = async (req, res) => {
     const { ip } = req.query;
