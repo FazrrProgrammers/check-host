@@ -1,9 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/check-http.js", "use": "@vercel/node" }
+    { "src": "api/check-http.js", "use": "@vercel/node" },
+    { "src": "api/ip-info.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/check-http", "dest": "/api/check-http.js" }
+    { "src": "/api/check-http", "dest": "/api/check-http.js" },
+    { "src": "/api/ip-info", "dest": "/api/ip-info.js" }
   ]
 }
