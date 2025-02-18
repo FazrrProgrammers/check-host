@@ -1,0 +1,9 @@
+{
+  "name": "check-host",
+  "version": "1.0.0",
+  "main": "api/check-http.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0"
+  }
+}
