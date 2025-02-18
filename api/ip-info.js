@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
                 latitude: ipApiRes.data.lat,
                 longitude: ipApiRes.data.lon,
                 flag: ipWhoisRes.data.country_flag,
-                languages: ipWhoisRes.data.languages.join(", "),
+                languages: Array.isArray(ipWhoisRes.data.languages) ? ipWhoisRes.data.languages.join(", ") : "N/A",
                 continent_code: ipWhoisRes.data.continent_code ?? "N/A",
                 country_population: ipWhoisRes.data.country_population ?? "Unknown",
                 phone_code: ipApiRes.data.phone ?? "Unknown", // kode telepon negara
